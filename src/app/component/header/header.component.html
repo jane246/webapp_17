@@ -1,8 +1,4 @@
-<!-- <app-header></app-header> -->
-<router-outlet></router-outlet>
-<!-- <app-footer></app-footer> -->
-
-<!-- <mat-toolbar
+<mat-toolbar
   class="fxLayout dark"
   style="
   width:100%;
@@ -28,8 +24,8 @@
       Favorite Movies
     </button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item>Black Adam</button>
-      <button mat-menu-item>Black Panther</button>
+      <button mat-menu-item routerLink="/movie/blackadam">Black Adam</button>
+      <button mat-menu-item><a href="/movie/blackpanther">Black Panther</a></button>
     </mat-menu>
     <button mat-flat-button style="background-color: black;color:ghostwhite">
       Box office
@@ -38,4 +34,4 @@
       About us
     </button>
   </div>
-</mat-toolbar> -->
+</mat-toolbar> 
