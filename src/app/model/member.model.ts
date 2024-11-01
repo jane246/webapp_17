@@ -16,11 +16,11 @@ export interface Member {
 
 // Converts JSON strings to/from your types
 export class Convert {
-    public static toMember(json: string): Member[] {
+    public static toMember(json: string): Member {
         return JSON.parse(json);
     }
 
-    public static memberToJson(value: Member[]): string {
+    public static memberToJson(value: Member): string {
         return JSON.stringify(value);
     }
 }
