@@ -1,0 +1,34 @@
+<mat-toolbar
+  class="fxLayout dark"
+  style="
+  width:100%;
+  height:80px;
+  flex-direction:row;
+  justify-content:space-between;
+  background-color:#00035c;
+  color:ghostwhite;
+  "
+>
+  <div class="fxLayout" style="flex-direction: row; align-items:center">
+    <mat-icon>local_florist</mat-icon>
+    <span>&nbsp;Group 17</span>
+  </div>
+  <div>
+    <button mat-flat-button style="background-color: #00035c;color:ghostwhite">
+      Zone & Booth
+    </button>
+    <button 
+    mat-flat-button 
+    [matMenuTriggerFor]="menu"
+    style="background-color: #00035c;color:ghostwhite">
+      Login
+    </button>
+    <mat-menu #menu="matMenu">
+        <!-- เข้าสู่การเป็น member or admin -->
+      <button mat-menu-item routerLink="/">Login</button>
+      <!-- ข้อ 1 -->
+      <button mat-menu-item routerLink="/">Register</button>
+    </mat-menu>
+  </div>
+</mat-toolbar> 
+
