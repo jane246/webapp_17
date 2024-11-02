@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { HeaderComponent } from '../../component/admin/header/header.component';
-import { FooterComponent } from '../../component/admin/footer/footer.component';
+import { HeaderComponent } from '../../component/general/header/header.component';
+import { FooterComponent } from '../../component/general/footer/footer.component';
 import { Convert as memberCvt, Member } from '../../model/member.model';
 import { DataService } from '../../service/data.service';
 import { HttpClient } from '@angular/common/http';
