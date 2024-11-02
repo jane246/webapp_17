@@ -9,6 +9,7 @@ import { BoothComponent as BoothGeneralComponent } from './page_general/booth/bo
 import { LoginComponent as LoginMemberComponent } from './page_member/login/login.component';
 import { LoginComponent as LoginAdminComponent } from './page_admin/login/login.component';
 import { ViewMemberComponent } from './page_admin/view-member/view-member.component';
+import { CreateMemberComponent} from './page_general/create-member/create-member.component';
 
 export const routes: Routes = [
     { path: '', component: MainComponent },

@@ -1,0 +1,74 @@
+.example-card {
+    padding: 0;
+    margin: 0;
+    max-width: 400px;
+    flex: 0 0 calc(33.33% - 20px); /* แสดง 3 คอลัมน์ */
+    margin-bottom: 20px; /* ระยะห่างระหว่างแถว */
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .header {
+    width: 100%;
+    padding-top: 20px;
+    background-color: transparent;
+    color: #00035c;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+  }
+  
+  p {
+    margin: 0;
+    color:#00035c;
+    text-align: left !important;
+    padding: 0;
+  }
+  
+  .content {
+    // margin-top: 20px;
+    padding: 0;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* จัดตำแหน่ง `.zone-container` ให้อยู่ตรงกลาง */
+  }
+  
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .image-gallery img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .zone-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  mat-card-content{
+    padding: 0;
+    margin-top: -20px;
+  }
