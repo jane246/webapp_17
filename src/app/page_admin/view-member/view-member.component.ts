@@ -15,7 +15,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-view-member',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, HttpClientModule,AdminComponent,HttpClientModule,MatTableModule,MatCardModule,CommonModule],
+  imports: [HeaderComponent, FooterComponent,AdminComponent,HttpClientModule,MatTableModule,MatCardModule,CommonModule],
   templateUrl: './view-member.component.html',
   styleUrl: './view-member.component.scss'
 })

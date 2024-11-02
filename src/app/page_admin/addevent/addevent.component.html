@@ -1,0 +1,33 @@
+<div class="form-container">
+  <h2>Add Event</h2>
+
+  <form #touristSpotForm="ngForm" (ngSubmit)="addNew(name_event.value, date_start.value, date_end.value)">
+      <div class="form-group">
+          <label for="name_event">Name Event :</label>
+          <input type="text" id="name_event" name="name_event" #name_event="ngModel" required placeholder="กรุณาใส่ชื่อสถานที่" ngModel>
+          <div *ngIf="name_event.invalid && (name_event.dirty || name_event.touched)" class="error-message">
+              ใส่ชื่อ
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="date_start">Date Start :</label>
+        <input type="date" id="date_start" name="date_start" #date_start="ngModel" required ngModel>
+        <div *ngIf="date_start.invalid && (date_start.dirty || date_start.touched)" class="error-message">
+            ใส่วันเริ่มงาน
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="date_end">Date End :</label>
+        <input type="date" id="date_end" name="date_end" #date_end="ngModel" required ngModel>
+        <div *ngIf="date_end.invalid && (date_end.dirty || date_end.touched)" class="error-message">
+            ใส่วันสิ้นสุดงาน
+        </div>
+    </div>
+    
+
+      <button type="submit" [disabled]="touristSpotForm.invalid" class="submit-button">Add</button>
+      <button type="button" (click)="close()" class="close-button">Close</button>
+  </form>
+</div>

@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div>
+    <div class="header">
+        Zone
+    </div>
+    <div class="con1"><button type="button" (click)="addNew()">เพิ่มข้อมูลใหม่</button></div>
+    
+    <div class="con1">
+        <table border="1" style="width: 80%; text-align: center;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Total Booth</th>
+                    <th>ID Event</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let zone of zones">
+                    <td>{{ zone.id_zone }}</td>
+                    <td>{{ zone.name_zone }}</td>
+                    <td>{{ zone.num_booth }}</td>
+                    <td>{{ zone.id_event }}</td>
+                    <td>
+                        <!-- <button type="button" (click)="edit()">Edit</button> -->
+                        <!-- <button (click)="delete(this.event.id_event)">Delete</button> -->
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
+</div>
+
+<app-footer></app-footer>

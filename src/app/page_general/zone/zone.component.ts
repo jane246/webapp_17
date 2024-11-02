@@ -9,6 +9,9 @@ import { BoothComponent } from '../booth/booth.component';
 import { HeaderComponent } from '../../component/general/header/header.component';
 import { FooterComponent } from '../../component/general/footer/footer.component';
 import { MatDialog } from '@angular/material/dialog';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
+
 
 @Component({
   selector: 'app-zone',

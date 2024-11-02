@@ -14,13 +14,25 @@
     <span>&nbsp;Group 17</span>
   </div>
   <div>
-    <!-- ข้อ 14-21 -->
-    <button mat-flat-button style="background-color: #00035c;color:ghostwhite">
-      Event & Zone & Booth
+    <button mat-flat-button style="background-color: #00035c;color:ghostwhite" routerLink="/page_admin/admin">
+      Home
     </button>
+    <!-- ข้อ 14-21 -->
+    <button 
+    mat-flat-button 
+    [matMenuTriggerFor]="menu1"
+    style="background-color: #00035c;color:ghostwhite">
+    Event & Zone & Booth
+    </button>
+    <mat-menu #menu1="matMenu">
+      <button mat-menu-item routerLink="/page_admin/event">Event</button>
+      <button mat-menu-item routerLink="/page_admin/zone">Zone</button>
+      <button mat-menu-item routerLink="/page_admin/booth">Booth</button>
+    </mat-menu>
+
     <!-- ข้อ 27 -->
-    <button mat-flat-button style="background-color: #00035c;color:ghostwhite">
-      About Booth
+    <button mat-flat-button style="background-color: #00035c;color:ghostwhite" routerLink="/page_admin/reservation">
+      Reserved booth
     </button>
     <button 
     mat-flat-button 
@@ -32,7 +44,9 @@
       <!-- ข้อ 23 -->
       <button mat-menu-item routerLink="/page_admin/view-member">Member</button>
       <!-- ข้อ 22 และ 24-26 -->
-      <button mat-menu-item routerLink="/">Payment</button>
+      <button mat-menu-item routerLink="/page_admin/nopaid">Not paid</button>
+      <button mat-menu-item routerLink="/page_admin/paid">Paid</button>
+      <button mat-menu-item routerLink="/page_admin/wait">Waiting to check</button>
     </mat-menu>
     <button mat-flat-button style="background-color: #00035c;color:ghostwhite">
       Logout

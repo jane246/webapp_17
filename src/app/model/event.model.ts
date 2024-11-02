@@ -2,9 +2,9 @@
 //
 //   import { Convert } from "./file";
 //
-//   const reservation = Convert.toReservation(json);
+//   const event = Convert.toEvent(json);
 
-export interface Reservation {
+export interface Event {
     id_event:   string;
     name_event: string;
     date_start: string;
@@ -13,11 +13,11 @@ export interface Reservation {
 
 // Converts JSON strings to/from your types
 export class Convert {
-    public static toReservation(json: string): Reservation[] {
+    public static toEvent(json: string): Event[] {
         return JSON.parse(json);
     }
 
-    public static reservationToJson(value: Reservation[]): string {
+    public static eventToJson(value: Event[]): string {
         return JSON.stringify(value);
     }
 }

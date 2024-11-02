@@ -1,0 +1,34 @@
+<div class="form-container">
+    <h2>Add Zone</h2>
+  
+    <form #touristSpotForm="ngForm" (ngSubmit)="addNew(name_zone.value, num_booth.value, id_event.value)">
+        <div class="form-group">
+            <label for="name_zone">Name Zone :</label>
+            <input type="text" id="name_zone" name="name_zone" #name_zone="ngModel" required placeholder="กรุณาใส่ชื่อสถานที่" ngModel>
+            <div *ngIf="name_zone.invalid && (name_zone.dirty || name_zone.touched)" class="error-message">
+                ใส่ชื่อ
+            </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="num_booth">Total Booth :</label>
+          <input type="date" id="num_booth" name="num_booth" #num_booth="ngModel" required ngModel>
+          <div *ngIf="num_booth.invalid && (num_booth.dirty || num_booth.touched)" class="error-message">
+              ใส่จำนวนบูธ
+          </div>
+      </div>
+      
+      <div class="form-group">
+          <label for="id_event">ID Event :</label>
+          <input type="date" id="id_event" name="id_event" #id_event="ngModel" required ngModel>
+          <div *ngIf="id_event.invalid && (id_event.dirty || id_event.touched)" class="error-message">
+              ใส่ ID Event
+          </div>
+      </div>
+      
+  
+        <button type="submit" [disabled]="touristSpotForm.invalid" class="submit-button">Add</button>
+        <button type="button" (click)="close()" class="close-button">Close</button>
+    </form>
+  </div>
+  

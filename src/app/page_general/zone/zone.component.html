@@ -1,20 +1,23 @@
 <app-header></app-header>
-<body>
+
+<div class="zone-page">
     <div class="header">
-        Zone
+        <h2>Zone</h2>
     </div>
+    
     <div class="content">
         <div class="zone-container">
             <mat-card class="example-card" appearance="outlined" *ngFor="let zone of zones" (click)="booth(zone)">
-                <div class="image-gallery">
-                    <mat-card-content>
-                        <p>{{zone.name_zone}}</p>
-                        <p>ID: {{zone.id_zone}}</p>
-                        <p>Total Booth: {{zone.num_booth}}</p>
-                    </mat-card-content>
-                </div>
+                <mat-card-header>
+                    <mat-card-title>{{ zone.name_zone }}</mat-card-title>
+                    <mat-card-subtitle>ID: {{ zone.id_zone }}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>Total Booth: {{ zone.num_booth }}</p>
+                </mat-card-content>
             </mat-card>
         </div>
     </div>
-</body>
+</div>
+
 <app-footer></app-footer>
