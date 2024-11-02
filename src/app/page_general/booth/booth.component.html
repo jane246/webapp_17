@@ -1,1 +1,19 @@
-<p>booth works!</p>
+<div class="bg1">
+    <h2 style="text-align: center; color: #00035c; margin-bottom: 20px;">รายละเอียด Booth</h2>
+    <div *ngFor="let booth of booths" style="margin-bottom: 15px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #fff;">
+        <div class="row">
+            <div class="col-6 imgbooth">
+                <img src="{{booth.img_booth}}" alt="Booth Image">
+            </div>
+            <div class="col-6" style="flex: 1; padding-left: 15px;text-align: left !important;">
+                <p><strong>ID:</strong> {{booth.id_booth}}</p>
+                <p><strong>Name:</strong> {{booth.name_booth}}</p>
+                <p><strong>Size:</strong> {{booth.width}} x {{booth.length}}</p>
+                <p><strong>Status:</strong> {{booth.status}}</p>
+                <p><strong>Price:</strong> {{booth.price}}</p>
+            </div>
+        </div>
+    </div>
+    <button (click)="close()">Close</button>
+    <br><br>
+</div>

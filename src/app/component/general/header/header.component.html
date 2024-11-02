@@ -14,6 +14,9 @@
     <span>&nbsp;Group 17</span>
   </div>
   <div>
+    <button mat-flat-button style="background-color: #00035c;color:ghostwhite" routerLink="/page_general/general">
+      Home
+    </button>
     <button mat-flat-button style="background-color: #00035c;color:ghostwhite" routerLink="/page_general/zone">
       Zone & Booth
     </button>
@@ -25,9 +28,10 @@
     </button>
     <mat-menu #menu="matMenu">
         <!-- เข้าสู่การเป็น member or admin -->
-      <button mat-menu-item routerLink="/">Login</button>
+      <button mat-menu-item routerLink="/page_member/login">Login</button>
       <!-- ข้อ 1 -->
       <button mat-menu-item routerLink="/">Register</button>
+      <button mat-menu-item routerLink="/page_admin/login">Admin</button>
     </mat-menu>
   </div>
 </mat-toolbar> 

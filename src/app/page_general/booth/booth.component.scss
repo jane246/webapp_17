@@ -1,0 +1,51 @@
+.bg1{
+    display: flex; 
+    flex-direction: column; 
+    height: 500px; 
+    width: 500px; 
+    margin: 20px; 
+    background-color: rgb(255, 255, 255); 
+    padding: 20px; 
+    border-radius: 8px; 
+    // box-shadow: 0px 0px 10px #00035c;
+}
+.row{
+    display: flex; 
+    text-align: left !important;
+}
+.imgbooth{
+    flex: 1; 
+    text-align: center;
+}
+img{
+    max-width: 100%; 
+    border-radius: 5px;
+}
+button {
+    padding: 10px 20px; 
+    background-color: #00035c; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-top: auto; 
+    align-self: center;
+    margin-bottom: -20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+    transition: transform 0.2s; /* เพิ่มเอฟเฟกต์การกด */
+}
+
+/* เอฟเฟกต์เมื่อ hover */
+button:hover {
+    background-color: #00004a; /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* เอฟเฟกต์เมื่อกดปุ่ม */
+button:active {
+    transform: scale(0.98); /* ย่อขนาดเล็กลงเล็กน้อยเมื่อกด */
+}
+p{
+    margin: 0;
+    color:#00035c;
+    text-align: left !important;
+}

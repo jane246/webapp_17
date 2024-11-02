@@ -13,11 +13,13 @@ import { Convert as memberCvt, Member } from '../../model/member.model';
   styleUrl: './member.component.scss'
 })
 export class MemberComponent {
+user: any;
   constructor() {
+    console.log("4444");
     let rawUser: any = sessionStorage.getItem('user');
-    if (rawUser != null) {
-      let user: any =  memberCvt.toMember(rawUser)
+    if (rawUser != null) { // เปลี่ยนจาก == เป็น !=
+      let user: any = memberCvt.toMember(rawUser);
       console.log(user.id_member);
-    }
-  }
+    } 
+}
 }

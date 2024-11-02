@@ -1,4 +1,19 @@
+<app-header></app-header>
+<body>
+  <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="email">Email</label>
+      <input id="email" type="text" formControlName="email">
+    </div>
 
-<input matInput type="text" value="username">
-<input matInput type="text" value="password">   
-<button>Login</button>
+    <div>
+      <label for="password">Password</label>
+      <input id="password" type="password" formControlName="password">
+    </div>
+
+    <button type="submit">Login</button>
+  </form>
+</body>
+
+<app-footer></app-footer>
+  

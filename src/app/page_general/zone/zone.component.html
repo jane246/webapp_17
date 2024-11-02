@@ -1,9 +1,20 @@
-<mat-card class="example-card" appearance="outlined" *ngFor="let zone of zones">
-    <mat-card-header>
-      <mat-card-title>{{zone.name_zone}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>444444444444444</p>
-    </mat-card-content>
-  </mat-card>
-  
+<app-header></app-header>
+<body>
+    <div class="header">
+        Zone
+    </div>
+    <div class="content">
+        <div class="zone-container">
+            <mat-card class="example-card" appearance="outlined" *ngFor="let zone of zones" (click)="booth(zone)">
+                <div class="image-gallery">
+                    <mat-card-content>
+                        <p>{{zone.name_zone}}</p>
+                        <p>ID: {{zone.id_zone}}</p>
+                        <p>Total Booth: {{zone.num_booth}}</p>
+                    </mat-card-content>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</body>
+<app-footer></app-footer>
