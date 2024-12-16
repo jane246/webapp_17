@@ -1,0 +1,67 @@
+<div class="form-container">
+    <h2>Add Booth</h2>
+  
+    <form #touristSpotForm="ngForm" (ngSubmit)="addNew(name_booth.value, width.value, length.value, product.value, id_zone.value, price.value,img_booth.value)">
+        <div class="form-group">
+            <label for="name_booth">Name Booth :</label>
+            <input type="text" id="name_booth" name="name_booth" #name_booth="ngModel" required placeholder="กรุณาใส่ชื่อโซน" ngModel>
+            <div *ngIf="name_booth.invalid && (name_booth.dirty || name_booth.touched)" class="error-message">
+                ใส่ชื่อ
+            </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="width">Width :</label>
+          <input type="number" id="width" name="width" #width="ngModel" required ngModel>
+          <div *ngIf="width.invalid && (width.dirty || width.touched)" class="error-message">
+              ใส่ความกว้าง
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="length">Length :</label>
+        <input type="number" id="length" name="length" #length="ngModel" required ngModel>
+        <div *ngIf="length.invalid && (length.dirty || length.touched)" class="error-message">
+            ใส่ความยาว
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="product">Product :</label>
+        <input type="text" id="product" name="product" #product="ngModel" required ngModel>
+        <div *ngIf="product.invalid && (product.dirty || product.touched)" class="error-message">
+            ใส่สินค้า
+        </div>
+    </div>
+      
+      <div class="form-group">
+          <label for="price">Price :</label>
+          <input type="number" id="price" name="price" #price="ngModel" required ngModel>
+          <div *ngIf="price.invalid && (price.dirty || price.touched)" class="error-message">
+              ใส่ราคา
+          </div>
+      </div>
+
+      <div class="form-group">
+        <label for="id_zone">ID Zone :</label>
+        <input type="number" id="id_zone" name="id_zone" #id_zone="ngModel" required ngModel>
+        <div *ngIf="id_zone.invalid && (id_zone.dirty || id_zone.touched)" class="error-message">
+            ใส่ ID Zone
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="img_booth">Image :</label>
+        <input type="text" id="img_booth" name="img_booth" #img_booth="ngModel" required ngModel>
+        <div *ngIf="img_booth.invalid && (img_booth.dirty || img_booth.touched)" class="error-message">
+            ใส่รูปภาพ
+        </div>
+    </div>
+      
+  
+        <button type="submit" [disabled]="touristSpotForm.invalid" class="submit-button">Add</button>
+        <button type="button" (click)="close()" class="close-button">Close</button>
+    </form>
+  </div>
+  
+

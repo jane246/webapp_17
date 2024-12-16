@@ -1,6 +1,42 @@
 <app-header></app-header>
 <div>
-
+    <div class="header">
+        Booth
+    </div>
+    <div class="con1"><button type="button" (click)="addNew()">เพิ่มข้อมูลใหม่</button></div>
+    
+    <div class="con1">
+        <table border="1" style="width: 90%; text-align: center;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>ID Zone</th>
+                    <th>image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let booth of booths">
+                    <td>{{ booth.id_booth }}</td>
+                    <td>{{ booth.name_booth }}</td>
+                    <td>{{ booth.width }}x{{ booth.length }}</td>
+                    <td>{{ booth.product }}</td>
+                    <td>{{ booth.price }}</td>
+                    <td>{{ booth.id_zone }}</td>
+                    <td><img src="{{ booth.img_booth }}"></td>
+                    <td>
+                        <button type="button" (click)="edit(booth)">Edit</button>
+                        <button (click)="delete(booth.id_booth)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <br>
 </div>
+
 <app-footer></app-footer>

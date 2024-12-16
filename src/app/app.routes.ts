@@ -31,8 +31,8 @@ export const routes: Routes = [
     { path: 'page_admin/booth', component: BoothAdminComponent },
     { path: 'page_admin/event', component: EventAdminComponent },
     { path: 'page_admin/editevent', component: EditeventComponent },
-    { path: 'page_admin/nopaid', component: PaidComponent },
-    { path: 'page_admin/paid', component: NopaidComponent },
+    { path: 'page_admin/nopaid', component: NopaidComponent },
+    { path: 'page_admin/paid', component: PaidComponent },
     { path: 'page_admin/wait', component: WaitComponent },
     { path: 'page_admin/reservation', component: ReservationComponent },
 

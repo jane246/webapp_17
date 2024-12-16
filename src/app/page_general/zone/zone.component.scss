@@ -33,8 +33,10 @@ p{
 }
 .content {
     margin-top: 20px;
-    width: 80%;
+    // width: 80%;
+    display: flex;
     text-align: center;
+    justify-content: center;
 }
 .image-gallery {
     display: flex;
@@ -52,5 +54,6 @@ p{
 .zone-container {
   display: flex;
   flex-wrap: wrap; /* ช่วยให้ card ย้ายไปยังแถวถัดไปเมื่อเกิน */
-  // justify-content: space-between; /* จัดการระยะห่างระหว่างคอลัมน์ */
+  justify-content: center; /* จัดการระยะห่างระหว่างคอลัมน์ */
+  align-items: center;
 }

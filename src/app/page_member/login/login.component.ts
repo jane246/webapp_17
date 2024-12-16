@@ -43,6 +43,7 @@ export class LoginComponent {
         } else {
           this.user = response.user;
           this.dataSave(this.user);
+          console.log(this.user)
           this.router.navigate(['/page_member/member']); // เปลี่ยนไปยังหน้าถัดไป
         }
       }, error => {

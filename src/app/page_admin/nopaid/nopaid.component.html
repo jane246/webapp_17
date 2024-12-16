@@ -1,6 +1,34 @@
 <app-header></app-header>
 <div>
-
+    <div class="header">
+        Unpaid
+    </div>
+    
+    <div class="con1">
+        <table border="1" style="width: 90%; text-align: center;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Name Zone</th>
+                    <th>Name Booth</th>
+                    <th>Phone</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let nopaid of nopaids">
+                    <td>{{ nopaid.t_name }}{{ nopaid.f_name }} {{ nopaid.l_name }}</td>
+                    <td>{{ nopaid.name_zone }}</td>
+                    <td>{{ nopaid.name_booth }}</td>
+                    <td>{{ nopaid.phone }}</td>
+                    <td>{{ nopaid.status_reser }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <br>
 </div>
+
 <app-footer></app-footer>
+
+

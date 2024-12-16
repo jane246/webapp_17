@@ -11,7 +11,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
-                    <th>Total Booth</th>
+                    <th>Booth</th>
                     <th>ID Event</th>
                     <th>Action</th>
                 </tr>
@@ -23,8 +23,8 @@
                     <td>{{ zone.num_booth }}</td>
                     <td>{{ zone.id_event }}</td>
                     <td>
-                        <!-- <button type="button" (click)="edit()">Edit</button> -->
-                        <!-- <button (click)="delete(this.event.id_event)">Delete</button> -->
+                        <button type="button" (click)="edit(zone)">Edit</button>
+                        <button (click)="delete(zone.id_zone)">Delete</button>
                     </td>
                 </tr>
             </tbody>

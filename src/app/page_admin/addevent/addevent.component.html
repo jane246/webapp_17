@@ -4,7 +4,7 @@
   <form #touristSpotForm="ngForm" (ngSubmit)="addNew(name_event.value, date_start.value, date_end.value)">
       <div class="form-group">
           <label for="name_event">Name Event :</label>
-          <input type="text" id="name_event" name="name_event" #name_event="ngModel" required placeholder="กรุณาใส่ชื่อสถานที่" ngModel>
+          <input type="text" id="name_event" name="name_event" #name_event="ngModel" required placeholder="กรุณาใส่ชื่ออีเวนท์" ngModel>
           <div *ngIf="name_event.invalid && (name_event.dirty || name_event.touched)" class="error-message">
               ใส่ชื่อ
           </div>

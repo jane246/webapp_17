@@ -1,0 +1,38 @@
+<div class="form-container">
+    <h2>Edit Booth</h2>
+  
+    <form>
+        <div class="form-group">
+            <label for="name_booth">Name Booth :</label>
+            <input type="text" name="name_booth" #name_booth value="{{selected.name_booth}}">
+        </div>
+  
+        <div class="form-group">
+          <label for="width">Width :</label>
+          <input type="number" name="width" #width value="{{selected.width}}">
+      </div>
+      
+      <div class="form-group">
+          <label for="length">Length :</label>
+          <input type="number" name="length" #length value="{{selected.length}}">
+      </div>
+
+      <div class="form-group">
+        <label for="product">Product :</label>
+        <input type="text" name="product" #product value="{{selected.product}}">
+    </div>
+
+        <div class="form-group">
+        <label for="id_zone">ID Zone :</label>
+        <input type="number" name="id_zone" #id_zone value="{{selected.id_zone}}">
+    </div>
+    
+    <div class="form-group">
+        <label for="price">Price :</label>
+        <input type="number" name="price" #price value="{{selected.price}}">
+    </div>
+  
+        <button (click)="save(name_booth.value, width.value, length.value, product.value, id_zone.value, price.value)" class="submit-button">Save</button>
+        <button (click)="close()" class="close-button">Cancel</button>
+    </form>
+  </div>

@@ -29,6 +29,7 @@ input[type="text"] {
     border: 1px solid #ccc; /* Border around the input */
     border-radius: 4px; /* Rounded corners for inputs */
     box-sizing: border-box; /* Include padding in width */
+    height: 15px;
 }
 
 .error-message {
@@ -70,5 +71,6 @@ input[type="date"] {
     border-radius: 4px; /* Rounded corners for inputs */
     box-sizing: border-box; /* Include padding in width */
     font-size: 16px; /* Increase font size for better readability */
+    height: 15px;
 }
 

@@ -29,6 +29,7 @@ input[type="text"] {
     border: 1px solid #ccc; /* Border around the input */
     border-radius: 4px; /* Rounded corners for inputs */
     box-sizing: border-box; /* Include padding in width */
+    height: 15px;
 }
 
 .error-message {
@@ -63,12 +64,13 @@ input[type="text"] {
     font-size: 16px; /* Larger font for the button */
     margin-top: 10px; /* Space above the close button */
 }
-input[type="date"] {
+input[type="number"] {
     width: 100%; /* Full width of the container */
     padding: 10px; /* Padding inside the input */
     border: 1px solid #ccc; /* Border around the input */
     border-radius: 4px; /* Rounded corners for inputs */
     box-sizing: border-box; /* Include padding in width */
     font-size: 16px; /* Increase font size for better readability */
+    height: 15px;
 }
 

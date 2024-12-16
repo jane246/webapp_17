@@ -1,6 +1,33 @@
 <app-header></app-header>
 <div>
-
+    <div class="header">
+        Wait Payment
+    </div>
+    
+    <div class="con1">
+        <table border="1" style="width: 90%; text-align: center;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Name Zone</th>
+                    <th>Name Booth</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let wait of waits">
+                    <td>{{ wait.t_name }}{{ wait.f_name }} {{ wait.l_name }}</td>
+                    <td>{{ wait.name_zone }}</td>
+                    <td>{{ wait.name_booth }}</td>
+                    <td>{{ wait.phone }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <br>
 </div>
+
 <app-footer></app-footer>
+
+
+

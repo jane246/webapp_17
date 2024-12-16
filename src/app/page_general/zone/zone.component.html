@@ -8,12 +8,10 @@
     <div class="content">
         <div class="zone-container">
             <mat-card class="example-card" appearance="outlined" *ngFor="let zone of zones" (click)="booth(zone)">
-                <mat-card-header>
+                <mat-card-content>
                     <mat-card-title>{{ zone.name_zone }}</mat-card-title>
                     <mat-card-subtitle>ID: {{ zone.id_zone }}</mat-card-subtitle>
-                </mat-card-header>
-                <mat-card-content>
-                    <p>Total Booth: {{ zone.num_booth }}</p>
+                    <mat-card-subtitle>Total Booth: {{ zone.num_booth }}</mat-card-subtitle>
                 </mat-card-content>
             </mat-card>
         </div>

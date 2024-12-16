@@ -1,29 +1,20 @@
 <app-header></app-header>
-<div>
-<body>
-<div class="form">
-  <form action="" class="sub-form">
-      <div class="upper-form">
-          <h2>Login Form</h2>
-          <div class="form-group">
-              <label for="username">ชื่อผู้ใช้</label>
-              <input type="text" id="username" name="username" required />
-          </div>
-          <div class="form-group">
-              <label for="password">รหัสผ่าน</label>
-              <input type="password" id="password" name="password" required />               
-          </div>
-          <div class="btn">
-              <button type="submit">Login</button>
-          </div>
+<div class="form-container">
+  <body>
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="login-form">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="text" formControlName="email" class="form-control">
       </div>
-  </form>
-  <div class="button-form">
-      <div class="no-accout">ไม่มีบัญชีนี้</div>
-      <a href="/register" class="sigup">ลงทะเบียน</a>
-  </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password" class="form-control">
+      </div>
+
+      <button type="submit" class="submit-button">Login</button>
+    </form>
+  </body>
+  <br>
 </div>
-</body>
-<br></div>
 <app-footer></app-footer>
-  

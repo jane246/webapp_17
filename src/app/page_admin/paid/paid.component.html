@@ -1,6 +1,35 @@
 <app-header></app-header>
 <div>
-
+    <div class="header">
+        Paid
+    </div>
+    
+    <div class="con1">
+        <table border="1" style="width: 90%; text-align: center;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Name Zone</th>
+                    <th>Name Booth</th>
+                    <th>Phone</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let paid of paids">
+                    <td>{{ paid.t_name }}{{ paid.f_name }} {{ paid.l_name }}</td>
+                    <td>{{ paid.name_zone }}</td>
+                    <td>{{ paid.name_booth }}</td>
+                    <td>{{ paid.phone }}</td>
+                    <td>{{ paid.status_reser }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <br>
 </div>
+
 <app-footer></app-footer>
+
+
+

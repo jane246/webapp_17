@@ -1,6 +1,35 @@
 <app-header></app-header>
 <div>
-
+    <div class="header">
+        Reservation Booth
+    </div>
+    
+    <div class="con1">
+        <table border="1" style="width: 90%; text-align: center;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Name Zone</th>
+                    <th>Price</th>
+                    <th>Name Booth</th>
+                    <th>status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let reser of resers">
+                    <td>{{ reser.id_reser }}</td>
+                    <td>{{ reser.t_name }}{{ reser.f_name }} {{ reser.l_name }}</td>
+                    <td>{{ reser.name_zone }}</td>
+                    <td>{{ reser.price }}</td>
+                    <td>{{ reser.name_booth }}</td>
+                    <td>{{ reser.status }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <br>
 </div>
+
 <app-footer></app-footer>
+

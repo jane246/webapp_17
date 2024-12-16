@@ -1,0 +1,24 @@
+<div class="form-container">
+    <h2>Edit Event</h2>
+  
+    <form>
+        <div class="form-group">
+            <label for="name_zone">Name Zone :</label>
+            <input type="text" name="name_zone" #name_zone value="{{selected.name_zone}}">
+        </div>
+  
+        <div class="form-group">
+          <label for="num_booth">Num Booth :</label>
+          <input type="number" name="num_booth" #num_booth value="{{selected.num_booth}}">
+      </div>
+      
+      <div class="form-group">
+          <label for="id_event">ID Event :</label>
+          <input type="number" name="id_event" #id_event value="{{selected.id_event}}">
+      </div>
+  
+        <button (click)="save(name_zone.value,num_booth.value,id_event.value)" class="submit-button">Save</button>
+        <button (click)="close()" class="close-button">Cancel</button>
+    </form>
+  </div>
+  

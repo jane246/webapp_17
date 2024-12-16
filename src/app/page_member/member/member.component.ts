@@ -15,7 +15,7 @@ import { Convert as memberCvt, Member } from '../../model/member.model';
 export class MemberComponent {
 user: any;
   constructor() {
-    console.log("4444");
+    // console.log("4444");
     let rawUser: any = sessionStorage.getItem('user');
     if (rawUser != null) { // เปลี่ยนจาก == เป็น !=
       let user: any = memberCvt.toMember(rawUser);

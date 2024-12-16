@@ -22,11 +22,12 @@ export class AddzoneComponent {
     console.log(this.zones);
   }
 
-  addNew(name_zone: string, num_booth: string, id_event: string) {
+  addNew(name_zone: string, num_booth: string, id_event: string,total_booth: string) {
     let jsonObj = {
       name_zone: name_zone,
       num_booth: num_booth,
-      id_event: id_event
+      id_event: id_event,
+      total_booth:total_booth
     };
     let jsonString = JSON.stringify(jsonObj);
     this.http.post(this.data.apiEndpoint + "/admin/add_zone", jsonString, { observe: 'response' }).subscribe((response) => {

@@ -1,38 +1,36 @@
-<div class="form-container">
+<!-- <div class="form-container">
 <div>
     <h2 style="text-align: center;">Edit Event</h2>
     <input type="text" name="name_event" #name_event value="{{selected.name_event}}">
     <input type="text" name="date_start" #date_start value="{{selected.date_start}}">
     <input type="text" name="date_end" #date_end value="{{selected.date_end}}">
     
-    <!-- <button (click)="save(name_event.value,date_start.value,date_end.value,name_event.number)">Save</button> -->
+    <button (click)="save(name_event.value,date_start.value,date_end.value)">Save</button>
     <button (click)="close()">Cancel</button>
 </div>
-</div>
+</div> -->
 
   
-   <!-- <div style="display: flex; flex-direction: column; width: 400px; padding: 20px;">
-    <h2>แก้ไขข้อมูล</h2>
-  
-    <label>Name:</label>
-    <input type="text" [(ngModel)]="event.name_event" class="form-control" />
-  
-    <label>Start:</label>
-    <input type="text" [(ngModel)]="event.date_start" class="form-control" />
-  
-    <label>End:</label>
-    <input type="text" [(ngModel)]="event.date_end" class="form-control" /> -->
-  
-    <!-- <label>สถานะ:</label>
-    <select [(ngModel)]="boothData.booth_status" class="form-control">
-      <option value="ว่าง">ว่าง</option>
-      <option value="จองแล้ว">จองแล้ว</option>
-      <option value="อยู่ระหว่างตรวจสอบ">อยู่ระหว่างตรวจสอบ</option>
-    </select>-->
-  
-    <!-- <div style="margin-top: 20px;">
-      <button (click)="save()" class="btn btn-primary">บันทึก</button>
-      <button (click)="close()" class="btn btn-secondary" style="margin-left: 10px;">ปิด</button>
+<div class="form-container">
+  <h2>Edit Event</h2>
+
+  <form>
+      <div class="form-group">
+          <label for="name_event">Name Event :</label>
+          <input type="text" name="name_event" #name_event value="{{selected.name_event}}">
+      </div>
+
+      <div class="form-group">
+        <label for="date_start">Date Start :</label>
+        <input type="date" name="date_start" #date_start value="{{selected.date_start}}">
     </div>
-  </div>
-   -->
+    
+    <div class="form-group">
+        <label for="date_end">Date End :</label>
+        <input type="date" name="date_end" #date_end value="{{selected.date_end}}">
+    </div>
+
+      <button (click)="save(name_event.value,date_start.value,date_end.value)" class="submit-button">Save</button>
+      <button (click)="close()" class="close-button">Cancel</button>
+  </form>
+</div>

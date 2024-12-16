@@ -5,17 +5,19 @@ import { HttpClient } from '@angular/common/http';
 // import { Event } from '../../model/event.model';
 import { FormsModule } from '@angular/forms';
 import { Convert as eventCvt, Event } from '../../model/event.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-editevent',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './editevent.component.html',
   styleUrls: ['./editevent.component.scss']
 })
 export class EditeventComponent {
   events: Array<Event>;
   selected:Event;
+ id_event: any;
   constructor(
     private data:DataService,
     private dialogRef: MatDialogRef<EditeventComponent>,
@@ -32,19 +34,25 @@ export class EditeventComponent {
   }
   
 
-  // save() {
-  //   this.http.put(`${this.dataService.apiEndpoint}/admin/event_Update/${this.event.id_event}`, this.event)
-  //     .subscribe(
-  //       (response) => {
-  //         console.log('Event updated successfully:', response);
-  //         this.dialogRef.close('updated');
-  //       },
-  //       (error) => {
-  //         console.error('Error updating event:', error);
-  //         alert('เกิดข้อผิดพลาดในการอัปเดตข้อมูลอีเวนต์');
-  //       }
-  //     );
-  // }
+  save(name_event: string, date_start: string, date_end: string) {
+    let jsonObj={
+      name_event:name_event,
+      date_start:date_start,
+      date_end:date_end,
+    }
+    let jsonString= JSON.stringify(jsonObj);
+    this.http.put(`${this.dataService.apiEndpoint}/admin/event_Update/${this.selected.id_event}`, jsonString)
+      .subscribe(
+        (response) => {
+          console.log('Event updated successfully:', response);
+          this.dialogRef.close('updated');
+        },
+        (error) => {
+          console.error('Error updating event:', error);
+          alert('เกิดข้อผิดพลาดในการอัปเดตข้อมูลอีเวนต์');
+        }
+      );
+  }
 }
 
 
